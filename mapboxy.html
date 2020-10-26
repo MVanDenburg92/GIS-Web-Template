@@ -1048,7 +1048,7 @@
           link.href = '#';
           link.className = 'title';
           link.id = "link-" + prop.id;
-          link.innerHTML = prop.address;
+          link.innerHTML = prop.Address;
 
           /* Add details to the individual listing. */
           var details = listing.appendChild(document.createElement('div'));
@@ -1101,7 +1101,7 @@
         var popup = new mapboxgl.Popup({closeOnClick: false})
           .setLngLat(currentFeature.geometry.coordinates)
           .setHTML('<h3>Sweetgreen</h3>' +
-            '<h4>' + currentFeature.properties.address + '</h4>')
+            '<h4>' + currentFeature.properties.Address + '</h4>')
           .addTo(map);
       }
     </script>
