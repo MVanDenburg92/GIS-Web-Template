@@ -1052,9 +1052,9 @@
 
           /* Add details to the individual listing. */
           var details = listing.appendChild(document.createElement('div'));
-          details.innerHTML = prop.city;
-          if (prop.phone) {
-            details.innerHTML += ' · ' + prop.phoneFormatted;
+          details.innerHTML = prop.City;
+          if (prop.Country) {
+            details.innerHTML += ' · ' + prop.Country;
           }
 
           /**
@@ -1100,7 +1100,7 @@
         if (popUps[0]) popUps[0].remove();
         var popup = new mapboxgl.Popup({closeOnClick: false})
           .setLngLat(currentFeature.geometry.coordinates)
-          .setHTML('<h3>Sweetgreen</h3>' +
+          .setHTML('<h3>currentFeature.properties.Name</h3>' +
             '<h4>' + currentFeature.properties.Address + '</h4>')
           .addTo(map);
       }
