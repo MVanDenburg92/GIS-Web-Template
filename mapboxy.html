@@ -1048,11 +1048,11 @@
           link.href = '#';
           link.className = 'title';
           link.id = "link-" + prop.id;
-          link.innerHTML = prop.Name +  "\n" + prop.Address;
+          link.innerHTML = prop.Name;
 
           /* Add details to the individual listing. */
           var details = listing.appendChild(document.createElement('div'));
-          details.innerHTML = prop.City;
+          details.innerHTML = prop.Address + ' · ' + prop.City + ' · ' + prop.Country;
           if (prop.Country) {
             details.innerHTML += ' · ' + prop.Country;
           }
