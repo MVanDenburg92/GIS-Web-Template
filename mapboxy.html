@@ -22,7 +22,12 @@
         -moz-box-sizing:border-box;
         box-sizing:border-box;
       }
-
+      @font-face {
+      font-family: 'All Ages';
+      src: url('../fonts/AllAgesDemo-2DPX.ttf');
+      src: url('../fonts/AllAgesDemoBold-vX1L.ttf') format('truetype'), 
+        url('../fonts/AllAgesDemoBoldItalic-wgR9.ttf') format('truetype'); 
+      }
       .sidebar {
         position:absolute;
         width:33.3333%;
@@ -43,7 +48,7 @@
       }
 
       h1 {
-        font: 'Magda Clean Mono Offc Pro Regular';
+        font-family: 'All Ages';
         font-size:40px;
         margin:0;
         font-weight:450;
