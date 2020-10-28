@@ -33,7 +33,7 @@
         position:absolute;
         width:33.3333%;
         height:100%;
-        top:0;left:0;
+        top:10;left:0;
         overflow:hidden;
         border-right:1px solid rgba(0,0,0,0.25);
       }
@@ -44,8 +44,9 @@
       .map {
         position:absolute;
         left:33.3333%;
+	      height:100%
         width:66.6666%;
-        top:0;bottom:0;
+        top:10;bottom:0;
       }
 
       h1 {
@@ -57,46 +58,6 @@
         padding: 20px 2px;
         color: white;
       }
-	#app-nav-bar {
-	/*position: absolute;*/
-	display: block;
-	width: 100%;
-	}
-	
-.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: #e6e6e6;
-}
-.navbar-collapse.collapse {
-    display: block !important;
-    height: auto !important;
-    padding-bottom: 0;
-    overflow: visible !important;
-}
-.navbar-collapse {
-    width: auto;
-    border-top: 0;
-        border-top-color: currentcolor;
-    box-shadow: none;
-}
-.navbar-collapse {
-    max-height: 340px;
-    padding-right: 15px;
-    padding-left: 15px;
-    overflow-x: visible;
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-    -webkit-overflow-scrolling: touch;
-}
-.collapse {
-    display: none;
-}
-*, ::before, ::after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}   
-    
-
       a {
         color:#404040;
         text-decoration:none;
@@ -232,81 +193,18 @@
       .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
         border-bottom-color: #91c949;
       }
+	    
+	    
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-default nav-fixed-top" role="navigation" id="app-nav-bar" >
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Cyber GIS</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="browse.html">Browse</a>
-                    </li>
-		     <li>
-                        <a href="mapboxy.html">Mapboxy</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Application<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">Setting</a>
-                            </li>
-                            <li>
-                                <a href="#">Manage User</a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Master<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">Point</a>
-                            </li>
-                            <li>
-                                <a href="#">Category</a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-
-                </ul>
-                
-                <ul class="nav navbar-nav navbar-right">
-                    <li><p class="navbar-text">Signed in as Cyber</p></li>
-                    <li>
-                        <a href="login.html">Login</a>
-                    </li>
-
-                </ul>
-            </div><!-- /.navbar-collapse -->
-        </nav>
-
     <div class='sidebar'>
       <div class='heading'>
         <h1>PUNK VENUES ACROSS THE GLOBE</h1>
       </div>
       <div id='listings' class='listings'></div>
     </div>
+<div id ='navbar' class='navy'></div>
     <div id='map' class='map'></div>
     <script>
       // This will let you use the .remove() function later on
