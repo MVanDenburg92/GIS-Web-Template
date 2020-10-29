@@ -18,6 +18,8 @@
         padding:0;
         -webkit-font-smoothing:antialiased;
       }
+	        list-style: none;
+}
       /*.navbar {
       margin-bottom: 0;
 	    }*/
@@ -32,35 +34,7 @@
       src: url('../fonts/AllAgesDemoBold-vX1L.ttf') format('truetype'), 
         url('../fonts/AllAgesDemoBoldItalic-wgR9.ttf') format('truetype'); 
       }
-	#app-nav-bar {
-	display: block;
-	width: 100%;
-	}
-	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-   	 border-color: #e6e6e6;
-	}
-
-	.navbar-collapse.collapse {
-   	 display: block !important;
-    	height: auto !important;
-    padding-bottom: 0;
-    overflow: visible !important;
-}
-.navbar-collapse {
-    width: auto;
-    border-top: 0;
-        border-top-color: currentcolor;
-    box-shadow: none;
-}
-.navbar-collapse {
-    max-height: 340px;
-    padding-right: 15px;
-    padding-left: 15px;
-    overflow-x: visible;
-}
-*, ::before, ::after {
-    box-sizing: border-box;
-}
+	
       .sidebar {
         position:absolute;
         width:33.3333%;
@@ -227,65 +201,44 @@
       .mapboxgl-popup-anchor-top > .mapboxgl-popup-tip {
         border-bottom-color: #91c949;
       }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.active {
+  background-color: #4CAF50;
+}
     </style>
   </head>
   <body>
-	  <nav class="navbar navbar-default nav-fixed-top" role="navigation" id="app-nav-bar" >
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Cyber GIS</a>
-            </div>
-
-	  <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="browse.html">Browse</a>
-                    </li>
-		     <li>
-                        <a href="mapboxy.html">Mapboxy</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Application<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">Setting</a>
-                            </li>
-                            <li>
-                                <a href="#">Manage User</a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Master<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="#">Point</a>
-                            </li>
-                            <li>
-                                <a href="#">Category</a>
-                            </li>
-
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-
-                </ul>
-              </div><!-- /.navbar-collapse -->
-        </nav>
+	<ul>
+ 	 <li><a class="active" href="#home">Home</a></li>
+ 	 <li><a href="#news">News</a></li>
+  	<li><a href="#contact">Contact</a></li>
+	</ul>
 	  
     <div class='sidebar'>
       <div class='heading'>
